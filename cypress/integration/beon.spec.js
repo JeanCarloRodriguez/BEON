@@ -1,4 +1,3 @@
-
 describe('Beon', () => {
 
     Cypress.on('uncaught:exception', (err, runnable) => {
@@ -11,8 +10,7 @@ describe('Beon', () => {
         cy.visit('https://beon.studio/')
     })
 
-    
-    it.only('Verify Business been filtered by "Computer Software"', () => {
+    it('Verify Business been filtered by "Computer Software"', () => {
         cy.get('.join-us').click()
         cy.get('.form-select').eq(1).select('Computer Software')
         cy.get('.job-offer.row .job-offer__details').each($element => {
